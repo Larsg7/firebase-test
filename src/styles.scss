@@ -20,12 +20,13 @@ $dark-t: mat-dark-theme($dark-p, $dark-a);
 }
 
 html, body {
-  height: 100%;
+  max-height: 100%;
   background-color: map_get($primary, default);
 }
 
 * {
   font-family: Roboto,"Helvetica Neue",sans-serif;
+  box-sizing: border-box;
 }
 
 mat-form-field {

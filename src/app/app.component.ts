@@ -34,18 +34,15 @@ export class AppComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       id: [idea ? idea.id : ''],
       name: [idea ? idea.name : '', Validators.required],
-      idea: [idea ? idea.idea : '', Validators.required]
+      idea: [idea ? idea.idea : '']
     });
   }
 
   ngOnInit() {
-    this.ideas.subscribe(res => console.log(res));
   }
 
   save() {
     if (this.formGroup.invalid) return;
-
-    console.log(this.formGroup);
 
     const idea: Idea = {
       id: this.formGroup.get('id').value,
